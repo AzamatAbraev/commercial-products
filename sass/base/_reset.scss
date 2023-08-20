@@ -1,0 +1,38 @@
+@use "../base/typography";
+
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}

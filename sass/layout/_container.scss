@@ -1,0 +1,12 @@
+@use "../utils/functions" as func;
+@use "../utils/placeholders";
+
+.container {
+  max-width: func.container(1440, 116);
+  @extend %container;
+}
+
+.container-md {
+  max-width: func.container(1600, 382);
+  @extend %container;
+}

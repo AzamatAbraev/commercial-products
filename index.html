@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="css/home.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="container nav__container">
+          <div class="nav__left">
+            <a class="nav__logo" href="index.html">
+              <img src="../images/header/logo-icon.svg" alt="Logo Icon" />
+              <img
+                class="nav__logo__text"
+                src="../images/header/logo.svg"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <div class="nav__middle">
+            <div class="nav__categories">
+              <button class="nav__categories__btn">
+                <img src="images/header/menu.svg" alt="Hamburger" />
+              </button>
+              <a href="pages/categories.html"> Каталог </a>
+            </div>
+            <div class="nav__search">
+              <input type="search" placeholder="Найти товар" />
+            </div>
+            <button class="nav__search__btn">
+              <img
+                class="nav__search__icon"
+                src="images/header/search.icon.svg"
+                alt="Search"
+              />
+            </button>
+          </div>
+          <div class="nav__right">
+            <a class="nav__right__link" href="pages/favourites.html">
+              <img
+                class="nav__btn__image"
+                src="images/header/favourite.svg"
+                alt="Favourites"
+              />
+              <p>Избранное</p>
+            </a>
+            <a class="nav__right__link" href="pages/products.html">
+              <img
+                class="nav__btn__image"
+                src="images/header/products.svg"
+                alt="Products"
+              />
+              <p>продукты</p>
+            </a>
+            <a class="nav__right__link" href="pages/cart.html">
+              <img
+                class="nav__btn__image"
+                src="images/header/cart.svg"
+                alt="Cart"
+              />
+              <p>Корзина</p>
+            </a>
+            <div class="nav__user">
+              <img
+                class="nav__btn__image"
+                src="../images/header/user-pic.svg"
+                alt="User Picture"
+              />
+              <p>Алексей</p>
+              <button>
+                <img src="../images/header/dropdown.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="home">
+        <div class="container home__container">
+          <img
+            class="home__main__img"
+            src="images/home/home-main.png"
+            alt="Vegatables"
+          />
+          <h1 class="home__title">Доставка бесплатно от 1000 ₽</h1>
+        </div>
+      </section>
+      <section class="discounts">
+        <div class="container discounts__container">
+          <div class="discounts__header">
+            <h2 class="discounts__header__title">Акции</h2>
+            <a href="pages/products.html" class="discounts__header__link">
+              <p>Bce продукты</p>
+              <img src="images/home/pointer-right.svg" alt="Arrow" />
+            </a>
+          </div>
+          <div class="discounts__row">
+            <div class="discounts__card">
+              <a href="pages/product.html" class="discounts__card__pic">
+                <img
+                  class="discounts__card__img"
+                  src="images/home/discounts-card-1.png"
+                  alt="Product 1"
+                />
+                <div class="discounts__card__percent">
+                  <p>-50%</p>
+                </div>
+                <button class="discounts__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="discounts__card__info">
+                <div class="discounts__card__payment">
+                  <div class="discounts__card__credit">
+                    <h4>44,50 ₽</h4>
+                    <p>С картой</p>
+                  </div>
+                  <div class="discounts__card__cash">
+                    <h3>50,50 ₽</h3>
+                    <p>Обычная</p>
+                  </div>
+                </div>
+                <p class="discounts__card__desc card__1">
+                  Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...
+                </p>
+                <div class="discounts__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="discounts__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="discounts__card">
+              <a href="pages/product.html" class="discounts__card__pic">
+                <img
+                  class="discounts__card__img"
+                  src="images/home/discounts-card-2.png"
+                  alt="Product 1"
+                />
+                <div class="discounts__card__percent">
+                  <p>-50%</p>
+                </div>
+                <button class="discounts__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="discounts__card__info">
+                <div class="discounts__card__payment">
+                  <div class="discounts__card__credit">
+                    <h4>44,50 ₽</h4>
+                    <p>С картой</p>
+                  </div>
+                  <div class="discounts__card__cash">
+                    <h3>50,50 ₽</h3>
+                    <p>Обычная</p>
+                  </div>
+                </div>
+                <p class="discounts__card__desc card__2">
+                  Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...
+                </p>
+                <div class="discounts__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="discounts__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="discounts__card">
+              <a href="pages/product.html" class="discounts__card__pic">
+                <img
+                  class="discounts__card__img"
+                  src="images/home/discounts-card-3.png"
+                  alt="Product 1"
+                />
+                <div class="discounts__card__percent">
+                  <p>-50%</p>
+                </div>
+                <button class="discounts__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="discounts__card__info">
+                <div class="discounts__card__payment">
+                  <div class="discounts__card__credit">
+                    <h4>44,50 ₽</h4>
+                    <p>С картой</p>
+                  </div>
+                  <div class="discounts__card__cash">
+                    <h3>50,50 ₽</h3>
+                    <p>Обычная</p>
+                  </div>
+                </div>
+                <p class="discounts__card__desc card__3">
+                  Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...
+                </p>
+                <div class="discounts__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="discounts__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="discounts__card">
+              <a href="pages/product.html" class="discounts__card__pic">
+                <img
+                  class="discounts__card__img"
+                  src="images/home/discounts-card-4.png"
+                  alt="Product 1"
+                />
+                <div class="discounts__card__percent">
+                  <p>-50%</p>
+                </div>
+                <button class="discounts__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="discounts__card__info">
+                <div class="discounts__card__payment">
+                  <div class="discounts__card__credit">
+                    <h4>44,50 ₽</h4>
+                    <p>С картой</p>
+                  </div>
+                  <div class="discounts__card__cash">
+                    <h3>50,50 ₽</h3>
+                    <p>Обычная</p>
+                  </div>
+                </div>
+                <p class="discounts__card__desc card__4">
+                  Молоко ПРОСТОКВАШИНО паст. питьевое цельное отборное...
+                </p>
+                <div class="discounts__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-half.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="discounts__card__button"
+                >
+                  B кopзинy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products">
+        <div class="container products__container">
+          <div class="products__header">
+            <h2 class="products__header__title">Новинки</h2>
+            <a href="pages/products.html" class="products__header__link">
+              <p>Bce продукты</p>
+              <img src="images/home/pointer-right.svg" alt="Arrow" />
+            </a>
+          </div>
+          <div class="products__row">
+            <div class="products__card">
+              <a href="pages/product.html" class="products__card__pic">
+                <img
+                  class="products__card__img"
+                  src="images/home/products-1.png"
+                  alt="Product 1"
+                />
+                <button class="products__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="products__card__info">
+                <div class="products__card__price">
+                  <h4>599,99 ₽</h4>
+                </div>
+                <p class="products__card__desc card__1">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </p>
+                <div class="products__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="products__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="products__card">
+              <a href="pages/product.html" class="products__card__pic">
+                <img
+                  class="products__card__img"
+                  src="images/home/discounts-card-3.png"
+                  alt="Product 1"
+                />
+                <button class="products__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="products__card__info">
+                <div class="products__card__price">
+                  <h4>599,99 ₽</h4>
+                </div>
+                <p class="products__card__desc card__1">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </p>
+                <div class="products__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="products__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="products__card">
+              <a href="pages/product.html" class="products__card__pic">
+                <img
+                  class="products__card__img"
+                  src="images/home/discounts-card-4.png"
+                  alt="Product 1"
+                />
+                <button class="products__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="products__card__info">
+                <div class="products__card__price">
+                  <h4>599,99 ₽</h4>
+                </div>
+                <p class="products__card__desc card__1">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </p>
+                <div class="products__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="products__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="products__card">
+              <a href="pages/product.html" class="products__card__pic">
+                <img
+                  class="products__card__img"
+                  src="images/home/discounts-card-2.png"
+                  alt="Product 1"
+                />
+                <button class="products__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="products__card__info">
+                <div class="products__card__price">
+                  <h4>599,99 ₽</h4>
+                </div>
+                <p class="products__card__desc card__1">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </p>
+                <div class="products__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="products__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="products purchases">
+        <div class="container products__container">
+          <div class="products__header">
+            <h2 class="products__header__title">Покупали раньше</h2>
+            <a href="pages/products.html" class="products__header__link">
+              <p>Bce продукты</p>
+              <img src="images/home/pointer-right.svg" alt="Arrow" />
+            </a>
+          </div>
+          <div class="products__row">
+            <div class="products__card">
+              <a href="pages/product.html" class="products__card__pic">
+                <img
+                  class="products__card__img"
+                  src="images/home/purchase-1.png"
+                  alt="Product 1"
+                />
+                <button class="products__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="products__card__info">
+                <div class="products__card__price">
+                  <h4>599,99 ₽</h4>
+                </div>
+                <p class="products__card__desc card__1">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </p>
+                <div class="products__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="products__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="products__card">
+              <a href="pages/product.html" class="products__card__pic">
+                <img
+                  class="products__card__img"
+                  src="images/home/purchase-2.png"
+                  alt="Product 1"
+                />
+                <button class="products__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="products__card__info">
+                <div class="products__card__price">
+                  <h4>599,99 ₽</h4>
+                </div>
+                <p class="products__card__desc card__1">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </p>
+                <div class="products__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="products__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="products__card">
+              <a href="pages/product.html" class="products__card__pic">
+                <img
+                  class="products__card__img"
+                  src="images/home/purchase-3.png"
+                  alt="Product 1"
+                />
+                <button class="products__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="products__card__info">
+                <div class="products__card__price">
+                  <h4>599,99 ₽</h4>
+                </div>
+                <p class="products__card__desc card__1">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </p>
+                <div class="products__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="products__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+            <div class="products__card">
+              <a href="pages/product.html" class="products__card__pic">
+                <img
+                  class="products__card__img"
+                  src="images/home/purchase-4.png"
+                  alt="Product 1"
+                />
+                <button class="products__card__favourite__btn">
+                  <img src="images/home/heart-icon.svg" alt="Heart" />
+                </button>
+              </a>
+              <div class="products__card__info">
+                <div class="products__card__price">
+                  <h4>599,99 ₽</h4>
+                </div>
+                <p class="products__card__desc card__1">
+                  Комбайн КЗС-1218 «ДЕСНА-ПОЛЕСЬЕ GS12»
+                </p>
+                <div class="products__card__rating">
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/star.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                  <img src="images/home/start-gray.svg" alt="Star" />
+                </div>
+                <button
+                  onclick="location.href='pages/cart.html'"
+                  class="products__card__button"
+                >
+                  B корзину
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="offers">
+        <div class="container offers__container">
+          <h2 class="offers__title">Специальные предложения</h2>
+          <div class="offers__row">
+            <div class="offers__card offers__1">
+              <div class="offers__card__info">
+                <h3>Оформите карту «Северяночка»</h3>
+                <p>И получайте бонусы при покупке в магазинах и на сайте</p>
+              </div>
+              <div class="offers__card__img">
+                <img src="images/home/offers-1.1.png" alt="Credit Card" />
+              </div>
+            </div>
+            <div class="offers__card offers__2">
+              <div class="offers__card__info">
+                <h3>Покупайте акционные товары</h3>
+                <p>И получайте вдвое больше бонусов</p>
+              </div>
+              <div class="offers__card__img">
+                <img src="images/home/offers-2.png" alt="Credit Card" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="address">
+        <div class="container address__container">
+          <h2 class="address__title">Наши магазины</h2>
+          <div class="links__row" id="tabsDiv">
+            <button
+              class="linkClass active"
+              onclick="displayContent(event, 'interview')"
+            >
+              п.Щельяюр
+            </button>
+
+            <button
+              class="linkClass"
+              onclick="displayContent(event, 'practice')"
+            >
+              д.Вертеп
+            </button>
+
+            <button class="linkClass" onclick="displayContent(event, 'python')">
+              с.Краснобор
+            </button>
+
+            <button
+              class="linkClass"
+              onclick="displayContent(event, 'algorithms')"
+            >
+              д.Диюр
+            </button>
+          </div>
+
+          <div id="interview" class="contentClass active">
+            <img
+              class="address__map"
+              src="images/home/address-1.png"
+              alt="Branch Address"
+            />
+          </div>
+
+          <div id="practice" class="contentClass">
+            <img
+              class="address__map"
+              src="images/home/address-2.png"
+              alt="Branch Address"
+            />
+          </div>
+
+          <div id="python" class="contentClass">
+            <img
+              class="address__map"
+              src="images/home/address-3.png"
+              alt="Branch Address"
+            />
+          </div>
+
+          <div id="algorithms" class="contentClass">
+            <img
+              class="address__map"
+              src="images/home/address-4.png"
+              alt="Branch Address"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="articles">
+        <div class="container articles__container">
+          <div class="products__header">
+            <h2 class="products__header__title">Статьи</h2>
+            <a href="pages/articles.html" class="products__header__link">
+              <p>Все статьи</p>
+              <img src="images/home/pointer-right.svg" alt="Arrow" />
+            </a>
+          </div>
+          <div class="articles__row">
+            <div class="articles__card">
+              <div class="articles__card__top">
+                <img src="images/home/articles-1.png" alt="Article 1" />
+              </div>
+              <div class="articles__card__info">
+                <p class="articles__card__date">05.03.2021</p>
+                <h3 class="articles__card__title">
+                  Режим использования масок и перчаток на территории магазинов
+                </h3>
+                <p class="articles__card__desc">
+                  Подробная информация o режимах использования масок и перчаток
+                  на территории магазинов "ЛЕНТА". Информация обновляется каждый
+                  будний день.
+                </p>
+                <button
+                  onclick="location.href='pages/articles.html'"
+                  class="articles__card__button"
+                >
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <div class="articles__card">
+              <div class="articles__card__top">
+                <img src="images/home/articles-2.png" alt="Article 1" />
+              </div>
+              <div class="articles__card__info">
+                <p class="articles__card__date">05.03.2021</p>
+                <h3 class="articles__card__title title__2">
+                  Весеннее настроение для каждой
+                </h3>
+                <p class="articles__card__desc">
+                  8 Марта - это не просто Международный женский день, это ещё
+                  день тюльпанов, приятных сюрпризов и праздничных тёплых
+                  пожеланий.
+                </p>
+                <button
+                  onclick="location.href='pages/articles.html'"
+                  class="articles__card__button"
+                >
+                  Подробнее
+                </button>
+              </div>
+            </div>
+            <div class="articles__card">
+              <div class="articles__card__top">
+                <img src="images/home/articles-3.png" alt="Article 1" />
+              </div>
+              <div class="articles__card__info">
+                <p class="articles__card__date">05.03.2021</p>
+                <h3 class="articles__card__title">
+                  ЗОЖ или ФАСТФУД. вы на чьей стороне? Голосуем!
+                </h3>
+                <p class="articles__card__desc">
+                  Голосуйте за любимые категории, выбирайте категорию-победителя
+                  в мобильном приложении и получайте кешбэк 10% баллами в
+                  апреле!
+                </p>
+                <button
+                  onclick="location.href='pages/articles.html'"
+                  class="articles__card__button"
+                >
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer__container footer">
+        <div class="footer__top">
+          <div class="footer__left">
+            <div class="footer__left__img">
+              <img src="images/footer/footer-logo.svg" alt="Logo" />
+            </div>
+            <ul class="footer__left__menu">
+              <a href="pages/about.html">O компании</a>
+              <a href="pages/contact.html">Контакты</a>
+              <a href="pages/vacancies.html">Вакансии</a>
+              <a href="pages/articles.html">Статьи</a>
+              <a href="pages/privacy-policy.html"
+                >Политика обработки персональных данных</a
+              >
+            </ul>
+          </div>
+          <div class="footer__right">
+            <div class="footer__social-media">
+              <a href="https://www.instagram.com">
+                <img src="images/footer/instagram.svg" alt="Instagram" />
+              </a>
+              <a href="https://www.vk.com/">
+                <img src="images/footer/vkontakte.svg" alt="VKontakte" />
+              </a>
+              <a href="https://www.facebook.com">
+                <img src="images/footer/facebook.svg" alt="Facebook" />
+              </a>
+              <a href="https://www.ok.ru">
+                <img
+                  src="images/footer/odnoklassniki.svg"
+                  alt="Odnoklassniki"
+                />
+              </a>
+            </div>
+            <div class="footer__number">
+              <img src="images/footer/tel.svg" alt="Telephone Icon" />
+              <p>8 800 777 33 33</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>Дизайн</p>
+          <a href="https://t.me/AAB_Daily">
+            <img
+              src="images/footer/footer-design-logo.svg"
+              alt="Designer logo"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__header">
+      <div class="container footer__header__container">
+        <a href="pages/categories.html" class="footer__products">
+          <img src="images/footer/footer-hamburger.svg" alt="Products" />
+          <p>Каталог</p>
+        </a>
+        <a href="pages/favourites.html" class="footer__products">
+          <img src="images/footer/footer-favourite.svg" alt="Favourites" />
+          <p>Каталог</p>
+        </a>
+        <a href="pages/products.html" class="footer__products">
+          <img src="images/footer/footer-products.svg" alt="Products" />
+          <p>Избранное</p>
+        </a>
+        <a href="pages/cart.html" class="footer__products">
+          <img src="images/footer/footer-cart.svg" alt="Products" />
+          <p>Корзина</p>
+        </a>
+        <a href="#">
+          <img src="images/footer/footer-user.svg" alt="User" />
+        </a>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
