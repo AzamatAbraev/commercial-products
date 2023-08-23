@@ -505,6 +505,9 @@ main {
   line-height: 150%;
 }
 
+.note {
+  padding-bottom: 120px;
+}
 .note__container {
   display: flex;
   gap: 80px;
