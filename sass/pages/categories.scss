@@ -3,6 +3,22 @@
 @use "../layout/footer.scss";
 @use "../utils/variables" as vrb;
 
+.sub__header {
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 80px;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  @media (max-width: 1000px) {
+    top: 76px !important;
+  }
+  @media (max-width: 650px) {
+    top: 62px !important;
+  }
+}
+
 main {
   background-color: vrb.$main-background;
   padding-bottom: 60px;

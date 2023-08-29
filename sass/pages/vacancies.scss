@@ -3,6 +3,22 @@
 @use "../layout/footer.scss";
 @use "../utils/variables" as vrb;
 
+.sub__header {
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 80px;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  @media (max-width: 1000px) {
+    top: 76px !important;
+  }
+  @media (max-width: 650px) {
+    top: 62px !important;
+  }
+}
+
 main {
   background-color: vrb.$main-background;
 }
@@ -90,7 +106,6 @@ main {
   }
 }
 
-
 @media (max-width: 1000px) {
   .home__card {
     padding: 26px;
@@ -98,7 +113,8 @@ main {
       font-size: 22px;
     }
 
-    &__subtitle, &__desc {
+    &__subtitle,
+    &__desc {
       font-size: 16px;
     }
   }
@@ -129,7 +145,8 @@ main {
       font-size: 14px;
     }
 
-    &__subtitle, &__desc {
+    &__subtitle,
+    &__desc {
       font-size: 12px;
     }
   }

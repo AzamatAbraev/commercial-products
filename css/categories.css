@@ -205,18 +205,78 @@ header {
   }
 }
 @media (max-width: 650px) {
-  .nav__user,
-  .nav__categories {
+  .nav__user {
     display: none;
   }
 }
 @media (max-width: 500px) {
-  .nav__right {
+  .nav__right,
+  .nav__categories {
     display: none;
   }
 }
 main {
   margin-top: 80px;
+}
+
+.menu__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.nav__column {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  row-gap: 24px;
+}
+.nav__column .nav__link {
+  color: #414141;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 150%;
+  transition: 0.5s ease-in-out;
+}
+.nav__column .nav__link:hover {
+  color: #FF6633;
+}
+
+@media (max-width: 1160px) {
+  .nav__column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 880px) {
+  .nav__column {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 34px;
+         column-gap: 34px;
+    row-gap: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .nav__link {
+    font-size: 14px !important;
+  }
+  .nav__column {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 28px !important;
+         column-gap: 28px !important;
+    row-gap: 16px !important;
+  }
+}
+@media (max-width: 400px) {
+  .nav__link {
+    font-size: 12px !important;
+  }
+  .menu__container {
+    padding: 20px;
+  }
+}
+.hidden {
+  position: absolute;
+  display: none;
 }
 
 footer {
@@ -319,12 +379,20 @@ footer {
 .footer__header__container .footer__products:hover > p {
   color: #FF6633;
 }
-.footer__header__container .footer__products p {
+.footer__header__container .footer__products p,
+.footer__header__container .footer__products .footer__categories__link {
   color: #414141;
   font-size: 10px;
   font-weight: 400;
   line-height: 150%;
   transition: 0.5s ease-in-out;
+}
+.footer__header__container .footer__products .footer__categories__link:hover {
+  color: #FF6633;
+}
+
+.footer__btn {
+  background-color: transparent;
 }
 
 @media (max-width: 1250px) {
@@ -405,6 +473,26 @@ footer {
     padding-bottom: 65px !important;
   }
 }
+.sub__header {
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 80px;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+@media (max-width: 1000px) {
+  .sub__header {
+    top: 76px !important;
+  }
+}
+@media (max-width: 650px) {
+  .sub__header {
+    top: 62px !important;
+  }
+}
+
 main {
   background-color: #FBF8EC;
   padding-bottom: 60px;

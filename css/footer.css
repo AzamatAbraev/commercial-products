@@ -167,12 +167,20 @@ footer {
 .footer__header__container .footer__products:hover > p {
   color: #FF6633;
 }
-.footer__header__container .footer__products p {
+.footer__header__container .footer__products p,
+.footer__header__container .footer__products .footer__categories__link {
   color: #414141;
   font-size: 10px;
   font-weight: 400;
   line-height: 150%;
   transition: 0.5s ease-in-out;
+}
+.footer__header__container .footer__products .footer__categories__link:hover {
+  color: #FF6633;
+}
+
+.footer__btn {
+  background-color: transparent;
 }
 
 @media (max-width: 1250px) {

@@ -78,6 +78,11 @@
         </div>
       </nav>
     </header>
+    <div class="sub__header hidden">
+      <div class="container menu__container">
+        <div class="nav__column"></div>
+      </div>
+    </div>
     <main>
       <section class="home">
         <div class="container home__container">
@@ -810,10 +815,14 @@
     </footer>
     <div class="footer__header">
       <div class="container footer__header__container">
-        <a href="pages/categories.html" class="footer__products">
-          <img src="images/footer/footer-hamburger.svg" alt="Products" />
-          <p>Каталог</p>
-        </a>
+        <div class="footer__products">
+          <button class="footer__btn">
+            <img src="images/footer/footer-hamburger.svg" alt="Products" />
+          </button>
+          <a class="footer__categories__link" href="pages/categories.html">
+            Каталог
+          </a>
+        </div>
         <a href="pages/favourites.html" class="footer__products">
           <img src="images/footer/footer-favourite.svg" alt="Favourites" />
           <p>Каталог</p>
@@ -833,5 +842,6 @@
     </div>
 
     <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
   </body>
 </html>

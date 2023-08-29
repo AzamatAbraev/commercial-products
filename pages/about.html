@@ -78,6 +78,11 @@
         </div>
       </nav>
     </header>
+    <div class="sub__header hidden">
+      <div class="container menu__container">
+        <div class="nav__column"></div>
+      </div>
+    </div>
     <main>
       <section class="home">
         <div class="container home__container">
@@ -141,10 +146,10 @@
                 <img src="../images/about/check.svg" alt="Checkbox" />
               </div>
               <div class="info__card__right">
-                <p class="info__card__title">
-                  Основная миссия компании
-                </p>
-                <h3 class="info__card__text">Максимальное качество товаров и услуг по доступной цене.</h3>
+                <p class="info__card__title">Основная миссия компании</p>
+                <h3 class="info__card__text">
+                  Максимальное качество товаров и услуг по доступной цене.
+                </h3>
               </div>
             </div>
             <div class="info__card">
@@ -152,10 +157,11 @@
                 <img src="../images/about/check.svg" alt="Checkbox" />
               </div>
               <div class="info__card__right">
-                <p class="info__card__title">
-                  Отличительная черта нашей сети
-                </p>
-                <h3 class="info__card__text">Здоровая и полезная продукция местного производства внаших магазинах.</h3>
+                <p class="info__card__title">Отличительная черта нашей сети</p>
+                <h3 class="info__card__text">
+                  Здоровая и полезная продукция местного производства внаших
+                  магазинах.
+                </h3>
               </div>
             </div>
           </div>
@@ -164,11 +170,13 @@
       <section class="note">
         <div class="container note__container">
           <div class="note__left">
-            <img src="../images/about/logo.png" alt="Logo">
+            <img src="../images/about/logo.png" alt="Logo" />
           </div>
           <div class="note__right">
-            <img src="../images/about/rectangle.svg" alt="rectangle">
-            <h2 class="note__right__text">Спасибо за то, что вы c нами. Северяночка, везет всегда!</h2>
+            <img src="../images/about/rectangle.svg" alt="rectangle" />
+            <h2 class="note__right__text">
+              Спасибо за то, что вы c нами. Северяночка, везет всегда!
+            </h2>
           </div>
         </div>
       </section>
@@ -227,10 +235,14 @@
     </footer>
     <div class="footer__header">
       <div class="container footer__header__container">
-        <a href="./categories.html" class="footer__products">
-          <img src="../images/footer/footer-hamburger.svg" alt="Products" />
-          <p>Каталог</p>
-        </a>
+        <div class="footer__products">
+          <button class="footer__btn">
+            <img src="../images/footer/footer-hamburger.svg" alt="Products" />
+          </button>
+          <a class="footer__categories__link" href="pages/categories.html">
+            Каталог
+          </a>
+        </div>
         <a href="./favourites.html" class="footer__products">
           <img src="../images/footer/footer-favourite.svg" alt="Favourites" />
           <p>Каталог</p>
@@ -248,5 +260,7 @@
         </a>
       </div>
     </div>
+
+    <script src="../js/menu.js"></script>
   </body>
 </html>
