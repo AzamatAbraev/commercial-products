@@ -12,7 +12,7 @@ const products = [
       "../assets/images/products/2.png",
       "../assets/images/products/3.png",
       "../assets/images/products/4.png",
-    ],    
+    ],
   },
   {
     id: 2,
@@ -323,7 +323,7 @@ const products = [
     name: "Ketchup",
     category: "Dairy",
     description:
-      "Ketchup is a tangy sauce made from tomatoes, vinegar, sugar, and spices.",
+      "Ketchup is a tangy sauce made from tomatoes, vinegar, sugar, and spices and has a sweet and sour flavor.",
     price: 77,
     rating: 5,
     discount: 0,
@@ -531,7 +531,7 @@ const products = [
     name: "Chicken Alfredo",
     category: "Dinner",
     description:
-      "Chicken Alfredo is a pasta dish made with chicken, alsjfkdlkasdfhlkjh.",
+      "Chicken Alfredo is a pasta dish made with chicken and is combined with parmesan cheese.",
     price: 94,
     rating: 4,
     discount: 20,

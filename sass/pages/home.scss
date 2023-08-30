@@ -155,9 +155,6 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      .card__1 {
-        min-height: 48px;
-      }
     }
 
     &__payment {
@@ -294,9 +291,6 @@
     flex-direction: column;
     gap: 8px;
     position: relative;
-    .card__1 {
-      min-height: 48px;
-    }
   }
 
   &__price {

@@ -619,9 +619,6 @@ footer {
   flex-direction: column;
   gap: 8px;
 }
-.discounts__card__info .card__1 {
-  min-height: 48px;
-}
 .discounts__card__payment {
   display: flex;
   justify-content: space-between;
@@ -740,9 +737,6 @@ footer {
   flex-direction: column;
   gap: 8px;
   position: relative;
-}
-.products__card__info .card__1 {
-  min-height: 48px;
 }
 .products__card__price h4 {
   color: #414141;
