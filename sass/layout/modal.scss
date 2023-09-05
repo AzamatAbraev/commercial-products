@@ -1,0 +1,137 @@
+@use "../global";
+@use "../utils/variables" as vrb;
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(252, 213, 186, 0.8);
+  transition: 0.5s;
+
+  &__content {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 40px 80px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 8px 16px 32px 0px rgba(255, 102, 51, 0.2);
+    label {
+      color: #8f8f8f;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    border-radius: 4px;
+    background: #f3f2f1;
+  }
+
+  &__btn {
+    color: vrb.$orange-main;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+    border-radius: 4px;
+    background: vrb.$orange-muted;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    a {
+      color: #606060;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%;
+      text-align: center;
+      padding: 8px;
+      transition: 0.5s;
+      &:hover {
+        color: vrb.$orange-main;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__register {
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid vrb.$green-main;
+    color: vrb.$green-main;
+    background-color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 150%;
+    transition: 0.5s;
+    &:hover {
+      background-color: vrb.$green-main;
+      color: #fff;
+    }
+  }
+
+  &__input {
+    border-radius: 4px;
+    border: 1px solid vrb.$green-main;
+    background: #fff;
+    box-shadow: 4px 8px 16px 0px rgba(112, 192, 91, 0.2);
+    color: vrb.$main-text;
+    padding: 12px 16px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 150%;
+  }
+
+  &__title {
+    color: vrb.$main-text;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+}
+
+@media (max-width: 435px) {
+  .modal__content {
+    width: 100%;
+    padding: 20px;
+    gap: 24px;
+    .modal__input {
+      font-size: 18px;
+      padding: 10px 12px;
+    }
+    .modal__btn {
+      font-size: 18px;
+      padding: 10px;
+    }
+    label {
+      font-size: 16px;
+    }
+  }
+}
+
+.modal__show {
+  display: flex;
+  z-index: 100;
+}

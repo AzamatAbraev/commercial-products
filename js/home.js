@@ -71,18 +71,18 @@ footerBtn.addEventListener("click", toggle);
 
 const discountsRow = document.querySelector(".discounts__row");
 
-function getDiscountCard(el) {
+function getDiscountCard({images, discount, price, name, description, id}) {
   return `
     <div class="discounts__card">
       <a href="pages/product.html">
         <div class="discounts__card__pic">
             <img
               class="discounts__card__img"
-              src="${el.images[0]}"
+              src="${images[0]}"
               alt="Product 1"
             />
             <div class="discounts__card__percent">
-              <p>-${el.discount}%</p>
+              <p>-${discount}%</p>
             </div>
             <button class="discounts__card__favourite__btn">
               <img src="images/home/heart-icon.svg" alt="Heart" />
@@ -92,19 +92,19 @@ function getDiscountCard(el) {
       <div class="discounts__card__info">
         <div class="discounts__card__payment">
           <div class="discounts__card__credit">
-            <h4>${el.price} ₽</h4>
+            <h4>${price} ₽</h4>
             <p>C картой</p>
           </div>
           <div class="discounts__card__cash">
-            <h3>${el.price + 6} ₽</h3>
+            <h3>${price + 6} ₽</h3>
             <p>Обычная</p>
           </div>
       </div>
         <p class="discounts__card__desc card__1">
-          ${el.name}
+          ${name}
         </p>
         <p class="discounts__card__desc card__1">
-          ${el.description}
+          ${description}
         </p>
       <div class="discounts__card__rating">
         <img src="images/home/star.svg" alt="Star" />
@@ -114,7 +114,7 @@ function getDiscountCard(el) {
         <img src="images/home/start-gray.svg" alt="Star" />
       </div>
       <button
-        onclick="location.href='pages/cart.html'"
+        onClick="addToCart(${id})"
         class="discounts__card__button"
         >
           B корзину
@@ -138,29 +138,30 @@ const newProductsRow = document.querySelector(".products__row");
 
 let newCard = products.filter((pr) => pr).slice(-4);
 
-function getNewCard(el) {
+function getNewCard({ images, discount, price, name, description, id }) {
   return `
    <div class="products__card">
       <a href="pages/product.html">
         <div class="products__card__pic">
           <img
             class="products__card__img"
-            src="${el.images[0]}"
+            src="${images[0]}"
             alt="Product 1"
             />
         <button class="products__card__favourite__btn">
           <img src="images/home/heart-icon.svg" alt="Heart" />
         </button>
-        </div>
+      <a/>
+      </div>
          <div class="products__card__info">
            <div class="products__card__price">
-             <h4>${el.price} ₽</h4>
+             <h4>${price} ₽</h4>
            </div>
            <p class="products__card__desc card__1">
-            ${el.name}
+            ${name}
            </p>
            <p class="products__card__desc card__1">
-            ${el.description}
+            ${description}
            </p>
            <div class="products__card__rating">
              <img src="images/home/star.svg" alt="Star" />
@@ -170,13 +171,12 @@ function getNewCard(el) {
              <img src="images/home/start-gray.svg" alt="Star" />
            </div>
            <button
-            onclick="location.href='pages/cart.html'"
+            onClick="addToCart(${id})"
             class="products__card__button"
             >
               B корзину
            </button>
-         </div>
-       </a>
+        </div>
      </div>`;
 }
 
@@ -192,14 +192,14 @@ const purchasedProductsRow = document.querySelector(".purchases .products__row")
 
 let purchasedCard = products.sort((a, b) => a.rating - b.rating).slice(-4);
 
-function getPurchasedCard(el) {
+function getPurchasedCard({images, discount, price, name, description, id}) {
   return `
   <div class="products__card">
               <a href="pages/product.html">
                 <div class="products__card__pic">
                   <img
                     class="products__card__img"
-                    src="${el.images[0]}"
+                    src="${images[0]}"
                     alt="Product 1"
                   />
                   <button class="products__card__favourite__btn">
@@ -209,13 +209,13 @@ function getPurchasedCard(el) {
               </a>
               <div class="products__card__info">
                 <div class="products__card__price">
-                  <h4>${el.price} ₽</h4>
+                  <h4>${price} ₽</h4>
                 </div>
                 <p class="products__card__desc card__1">
-                  ${el.name}
+                  ${name}
                 </p>
                 <p class="products__card__desc card__1">
-                  ${el.description}
+                  ${description}
                 </p>
                 <div class="products__card__rating">
                   <img src="images/home/star.svg" alt="Star" />
@@ -225,7 +225,7 @@ function getPurchasedCard(el) {
                   <img src="images/home/star.svg" alt="Star" />
                 </div>
                 <button
-                  onclick="location.href='pages/cart.html'"
+                  onClick="addToCart(${id})"
                   class="products__card__button"
                 >
                   B корзину
@@ -240,4 +240,4 @@ purchasedCard.map((el) => {
   purchasedProductsRow.innerHTML += purchased__card;
 })
 
-console.log(purchasedCard);
+addToCart();

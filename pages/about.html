@@ -64,13 +64,15 @@
               <p>Корзина</p>
             </a>
             <div class="nav__user">
-              <img
-                class="nav__btn__image"
-                src="../images/header/user-pic.svg"
-                alt="User Picture"
-              />
+              <button class="nav__user__btn">
+                <img
+                  class="nav__btn__image"
+                  src="../images/header/user-pic.svg"
+                  alt="User Picture"
+                />
+              </button>
               <p>Алексей</p>
-              <button>
+              <button class="nav__dropdown">
                 <img src="../images/header/dropdown.svg" alt="" />
               </button>
             </div>
@@ -84,6 +86,29 @@
       </div>
     </div>
     <main>
+      <div class="modal">
+        <form class="modal__content">
+          <button class="modal__close">
+            <img src="../images/header/close.svg" alt="Close" />
+          </button>
+          <h3 class="modal__title">Вход</h3>
+          <div class="modal__body">
+            <label for="phone">Телефон</label>
+            <input
+              required
+              class="modal__input"
+              id="phone"
+              type="text"
+              placeholder="+7 912 "
+            />
+          </div>
+          <button class="modal__btn" type="submit">Вход</button>
+          <div class="modal__footer">
+            <button class="modal__register">Регистрация</button>
+            <a>Забыли пароль?</a>
+          </div>
+        </form>
+      </div>
       <section class="home">
         <div class="container home__container">
           <div class="home__breadcrumb">
@@ -239,7 +264,7 @@
           <button class="footer__btn">
             <img src="../images/footer/footer-hamburger.svg" alt="Products" />
           </button>
-          <a class="footer__categories__link" href="pages/categories.html">
+          <a class="footer__categories__link" href="./categories.html">
             Каталог
           </a>
         </div>
@@ -255,12 +280,12 @@
           <img src="../images/footer/footer-cart.svg" alt="Products" />
           <p>Корзина</p>
         </a>
-        <a href="#">
+        <a class="footer__user__btn">
           <img src="../images/footer/footer-user.svg" alt="User" />
         </a>
       </div>
     </div>
-
+    <script src="../js/main.js"></script>
     <script src="../js/menu.js"></script>
   </body>
 </html>

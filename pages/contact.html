@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/contact.min.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="container nav__container">
+          <div class="nav__left">
+            <a class="nav__logo" href="../index.html">
+              <img src="../images/header/logo-icon.svg" alt="Logo Icon" />
+              <img
+                class="nav__logo__text"
+                src="../images/header/logo.svg"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <div class="nav__middle">
+            <div class="nav__categories">
+              <button class="nav__categories__btn">
+                <img src="../images/header/menu.svg" alt="Hamburger" />
+              </button>
+              <a href="./categories.html"> Каталог </a>
+            </div>
+            <div class="nav__search">
+              <input type="search" placeholder="Найти товар" />
+            </div>
+            <button class="nav__search__btn">
+              <img
+                class="nav__search__icon"
+                src="../images/header/search.icon.svg"
+                alt="Search"
+              />
+            </button>
+          </div>
+          <div class="nav__right">
+            <a class="nav__right__link" href="./favourites.html">
+              <img
+                class="nav__btn__image"
+                src="../images/header/favourite.svg"
+                alt="Favourites"
+              />
+              <p>Избранное</p>
+            </a>
+            <a class="nav__right__link" href="./products.html">
+              <img
+                class="nav__btn__image"
+                src="../images/header/products.svg"
+                alt="Products"
+              />
+              <p>продукты</p>
+            </a>
+            <a class="nav__right__link">
+              <img
+                class="nav__btn__image"
+                src="../images/header/cart.svg"
+                alt="Cart"
+              />
+              <p>Корзина</p>
+            </a>
+            <div class="nav__user">
+              <button class="nav__user__btn">
+                <img
+                  class="nav__btn__image"
+                  src="../images/header/user-pic.svg"
+                  alt="User Picture"
+                />
+              </button>
+              <p>Алексей</p>
+              <button class="nav__dropdown">
+                <img src="../images/header/dropdown.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="sub__header hidden">
+      <div class="container menu__container">
+        <div class="nav__column"></div>
+      </div>
+    </div>
+    <main>
+      <div class="modal">
+        <form class="modal__content">
+          <button class="modal__close">
+            <img src="../images/header/close.svg" alt="Close" />
+          </button>
+          <h3 class="modal__title">Вход</h3>
+          <div class="modal__body">
+            <label for="phone">Телефон</label>
+            <input
+              required
+              class="modal__input"
+              id="phone"
+              type="text"
+              placeholder="+7 912 "
+            />
+          </div>
+          <button class="modal__btn" type="submit">Вход</button>
+          <div class="modal__footer">
+            <button class="modal__register">Регистрация</button>
+            <a>Забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+      <section class="home">
+        <div class="container home__container">
+          <div class="home__breadcrumb">
+            <ul class="home__breadcrumb__nav">
+              <li class="home__breadcrumb__item">
+                <a href="../index.html" class="home__breadcrumb__link"
+                  >Главная</a
+                >
+              </li>
+              <li class="home__breadcrumb__item">
+                <img src="../images/about/arrow.svg" alt="Arrow" />
+              </li>
+              <li class="home__breadcrumb__item">
+                <a href="about.html" class="home__breadcrumb__link active"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+          <h1 class="home__title">Контакты</h1>
+          <div class="home__contact">
+            <div class="home__numbers">
+              <div class="home__numbers__accounting">
+                <img
+                  class="home__numbers__icon"
+                  src="../images/contact/home-contact.svg"
+                  alt=""
+                />
+                <div class="home__numbers__info">
+                  <h3 class="home__numbers__desc">Бухгалтерия, склад</h3>
+                  <p class="home__numbers__tel">+7 82140 92619</p>
+                </div>
+              </div>
+            </div>
+            <div class="home__numbers">
+              <div class="home__numbers__accounting">
+                <img
+                  class="home__numbers__icon"
+                  src="../images/contact/percent.svg"
+                  alt=""
+                />
+                <div class="home__numbers__info">
+                  <h3 class="home__numbers__desc">
+                    Вопросы по системе лояльности
+                  </h3>
+                  <p class="home__numbers__tel">+7 908 716 33 97</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="shops">
+        <div class="container shops__container">
+          <h2 class="shops__title">Наши магазины</h2>
+          <div class="links__row" id="tabsDiv">
+            <button
+              class="linkClass active"
+              onclick="displayContent(event, 'interview')"
+            >
+              п.Щельяюр
+            </button>
+
+            <button
+              class="linkClass"
+              onclick="displayContent(event, 'practice')"
+            >
+              д.Вертеп
+            </button>
+
+            <button class="linkClass" onclick="displayContent(event, 'python')">
+              с.Краснобор
+            </button>
+
+            <button
+              class="linkClass"
+              onclick="displayContent(event, 'algorithms')"
+            >
+              д.Диюр
+            </button>
+          </div>
+
+          <div id="interview" class="contentClass active">
+            <img
+              class="address__map"
+              src="../images/home/address-1.png"
+              alt="Branch Address"
+            />
+          </div>
+
+          <div id="practice" class="contentClass">
+            <img
+              class="address__map"
+              src="../images/home/address-2.png"
+              alt="Branch Address"
+            />
+          </div>
+
+          <div id="python" class="contentClass">
+            <img
+              class="address__map"
+              src="../images/home/address-3.png"
+              alt="Branch Address"
+            />
+          </div>
+
+          <div id="algorithms" class="contentClass">
+            <img
+              class="address__map"
+              src="../images/home/address-4.png"
+              alt="Branch Address"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer__container footer">
+        <div class="footer__top">
+          <div class="footer__left">
+            <div class="footer__left__img">
+              <img src="../images/footer/footer-logo.svg" alt="Logo" />
+            </div>
+            <ul class="footer__left__menu">
+              <a href="./about.html">O компании</a>
+              <a href="./contact.html">Контакты</a>
+              <a href="./vacancies.html">Вакансии</a>
+              <a href="./articles.html">Статьи</a>
+              <a href="./privacy-policy.html"
+                >Политика обработки персональных данных</a
+              >
+            </ul>
+          </div>
+          <div class="footer__right">
+            <div class="footer__social-media">
+              <a href="https://www.instagram.com">
+                <img src="../images/footer/instagram.svg" alt="Instagram" />
+              </a>
+              <a href="https://www.vk.com/">
+                <img src="../images/footer/vkontakte.svg" alt="VKontakte" />
+              </a>
+              <a href="https://www.facebook.com">
+                <img src="../images/footer/facebook.svg" alt="Facebook" />
+              </a>
+              <a href="https://www.ok.ru">
+                <img
+                  src="../images/footer/odnoklassniki.svg"
+                  alt="Odnoklassniki"
+                />
+              </a>
+            </div>
+            <div class="footer__number">
+              <img src="../images/footer/tel.svg" alt="Telephone Icon" />
+              <p>8 800 777 33 33</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>Дизайн</p>
+          <a href="https://t.me/AAB_Daily">
+            <img
+              src="../images/footer/footer-design-logo.svg"
+              alt="Designer logo"
+            />
+          </a>
+        </div>
+      </div>
+    </footer>
+    <div class="footer__header">
+      <div class="container footer__header__container">
+        <div class="footer__products">
+          <button class="footer__btn">
+            <img src="../images/footer/footer-hamburger.svg" alt="Products" />
+          </button>
+          <a class="footer__categories__link" href="pages/categories.html">
+            Каталог
+          </a>
+        </div>
+        <a href="./favourites.html" class="footer__products">
+          <img src="../images/footer/footer-favourite.svg" alt="Favourites" />
+          <p>Каталог</p>
+        </a>
+        <a href="./products.html" class="footer__products">
+          <img src="../images/footer/footer-products.svg" alt="Products" />
+          <p>Избранное</p>
+        </a>
+        <a href="./cart.html" class="footer__products">
+          <img src="../images/footer/footer-cart.svg" alt="Products" />
+          <p>Корзина</p>
+        </a>
+        <a class="footer__user__btn">
+          <img src="../images/footer/footer-user.svg" alt="User" />
+        </a>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 @use "../global";
 @use "../utils/variables" as vrb;
+@use "../layout/modal.scss";
 
 header {
   background: #fff;
@@ -125,11 +126,21 @@ header {
       line-height: 150%;
     }
 
-    button {
+    &__dropdown {
       padding: 8px;
       background-color: transparent;
     }
   }
+}
+
+.nav__user__btn {
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.nav__dropdown {
+  background-color: transparent;
+  border: none;
 }
 
 @media (max-width: 1000px) {
@@ -233,4 +244,20 @@ main {
 .hidden {
   position: absolute;
   display: none;
+}
+
+.nav__btn__image,
+.cart-link {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: 20%;
+  padding: 1px 2px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
 }

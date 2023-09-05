@@ -4,18 +4,19 @@ const searchInput = document.querySelector(".search__input");
 const pagination = document.querySelector(".pagination");
 const pageLink = document.querySelector(".page__btn");
 
+
 let search = "";
 
 let activePage = 1;
 
-function getCard(el) {
+function getCard({images, price, name, description, id}) {
   return `
    <div class="products__card">
       <a href="./product.html">
         <div class="products__card__pic">
           <img
             class="products__card__img"
-            src="${el.images[0]}"
+            src="${images[0]}"
             alt="Product 1"
             />
         <a class="products__card__favourite__btn">
@@ -24,13 +25,13 @@ function getCard(el) {
         </div>
          <div class="products__card__info">
            <div class="products__card__price">
-             <h4>${el.price} ₽</h4>
+             <h4>${price} ₽</h4>
            </div>
            <p class="products__card__desc card__1">
-            ${el.name}
+            ${name}
            </p>
            <p class="products__card__desc card__2">
-            ${el.description}
+            ${description}
            </p>
            <div class="products__card__rating">
              <img src="../images/home/star.svg" alt="Star" />
@@ -39,7 +40,7 @@ function getCard(el) {
              <img src="../images/home/start-gray.svg" alt="Star" />
              <img src="../images/home/start-gray.svg" alt="Star" />
            </div>
-           <button
+           <button onClick="addToCart(${id})"
             onclick="location.href='./cart.html'"
             class="products__card__button"
             >
@@ -127,4 +128,23 @@ function getPage(page) {
     activePage = page;
   }
   getProducts();
+}
+
+function addToCart(id) {
+  let product = products.find((pr) => pr.id === id);
+  let check = cart.find(pr => pr.id === id);
+
+  if (check) {
+    cart = cart.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity++;
+      }
+      return pr;
+    })
+  } else {
+    product.quantity = 1;
+    cart.push(product);
+  }
+  localStorage.setItem("cart", JSON.stringify(cart))
+  getTotalCart();
 }

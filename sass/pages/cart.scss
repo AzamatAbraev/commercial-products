@@ -1,0 +1,101 @@
+@use "../global";
+@use "../layout/header.scss";
+@use "../layout/footer.scss";
+@use "../utils/variables" as vrb;
+
+.sub__header {
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 80px;
+  right: 0;
+  left: 0;
+  z-index: 100;
+  @media (max-width: 1000px) {
+    top: 76px !important;
+  }
+  @media (max-width: 650px) {
+    top: 62px !important;
+  }
+}
+
+main {
+  background-color: vrb.$main-background;
+}
+
+.cart {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__card {
+    border-radius: 4px;
+    background:  #fff;
+    padding: 10px;
+    box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 50px;
+    &__content {
+      font-size: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      button {
+        padding: 0px 10px;
+        font-size: 24px;
+        color: #fff;
+      }
+    }
+    &__buttons {
+      .add__btn {
+        background-color: green;
+      }
+
+      .remove__btn {
+        background-color: red;
+      }
+    }
+    &__img {
+      height: 100%;
+      width: 300px;
+      object-fit: cover;
+    }
+  }
+}
+
+.home {
+  &__title {
+    color: vrb.$main-text;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  &__breadcrumb {
+    padding-top: 27px;
+    padding-bottom: 27px;
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    &__link {
+      color: vrb.$main-text;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 150%;
+      transition: 0.5s ease-in-out;
+      &:hover {
+        color: vrb.$orange-main;
+      }
+    }
+
+    &__link.active {
+      color: vrb.$orange-main;
+    }
+  }
+}
