@@ -4,24 +4,23 @@ const searchInput = document.querySelector(".search__input");
 const pagination = document.querySelector(".pagination");
 const pageLink = document.querySelector(".page__btn");
 
-
 let search = "";
 
 let activePage = 1;
 
-function getCard({images, price, name, description, id}) {
+function getCard({ images, price, name, description, id }) {
   return `
    <div class="products__card">
-      <a href="./product.html">
+      <a>
         <div class="products__card__pic">
           <img
             class="products__card__img"
             src="${images[0]}"
             alt="Product 1"
             />
-        <a class="products__card__favourite__btn">
+        <button onClick="addFavouritesCart(${id})" class="products__card__favourite__btn">
           <img src="../images/home/heart-icon.svg" alt="Heart" />
-        </a>
+        </button>
         </div>
          <div class="products__card__info">
            <div class="products__card__price">
@@ -79,13 +78,13 @@ function getProducts() {
     }
 
     pagination.innerHTML += `
-      <li class="page__item ${activePage === (pages) ? "disabled" : ""}">
+      <li class="page__item ${activePage === pages ? "disabled" : ""}">
         <button onclick="getPage('+')" class="page__btn">
           <img src="../images/products/next.svg">
         </button>
       </li>`;
-      pagination.innerHTML += `
-      <li class="page__item ${activePage === (pages) ? "disabled" : ""}">
+    pagination.innerHTML += `
+      <li class="page__item ${activePage === pages ? "disabled" : ""}">
         <button onclick="getPage('++')" class="page__btn">
           <img src="../images/products/double-next.svg">
         </button>
@@ -132,7 +131,7 @@ function getPage(page) {
 
 function addToCart(id) {
   let product = products.find((pr) => pr.id === id);
-  let check = cart.find(pr => pr.id === id);
+  let check = cart.find((pr) => pr.id === id);
 
   if (check) {
     cart = cart.map((pr) => {
@@ -140,11 +139,21 @@ function addToCart(id) {
         pr.quantity++;
       }
       return pr;
-    })
+    });
   } else {
     product.quantity = 1;
     cart.push(product);
   }
-  localStorage.setItem("cart", JSON.stringify(cart))
+  localStorage.setItem("cart", JSON.stringify(cart));
   getTotalCart();
+}
+
+let favCartArr = [];
+
+function addFavouritesCart(id) {
+  let favProduct = products.find((pr) => pr.id === id);
+  let checkFav = favCartArr.find((pr) => pr.id === id);
+
+  favCartArr.push(favProduct);
+  localStorage.setItem("favCart", JSON.stringify(favCartArr));
 }

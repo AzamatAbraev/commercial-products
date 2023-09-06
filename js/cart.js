@@ -35,7 +35,7 @@ function getCartProducts() {
   cartRow.innerHTML = "";
   cart.map((pr) => {
     cartRow.innerHTML += getCartCard(pr);
-  });
+  }); 
 }
 
 getCartProducts();
