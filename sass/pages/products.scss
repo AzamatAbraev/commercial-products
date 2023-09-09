@@ -19,6 +19,21 @@
   }
 }
 
+.favourite-link, .favourite__btn__img {
+  position: relative;
+}
+
+.favourite-count {
+  position: absolute;
+  top: -2px;
+  right: 25%;
+  padding: 1px 2px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
 main {
   background-color: vrb.$main-background;
 }
@@ -68,7 +83,7 @@ main {
     position: relative;
   }
 
-  &__favourite__btn {
+  .favourite__btn {
     position: absolute;
     top: 8px;
     right: 8px;

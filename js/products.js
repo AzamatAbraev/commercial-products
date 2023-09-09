@@ -3,6 +3,8 @@ const productsCountNumber = document.querySelector(".home__count__number");
 const searchInput = document.querySelector(".search__input");
 const pagination = document.querySelector(".pagination");
 const pageLink = document.querySelector(".page__btn");
+const favCount = document.querySelector(".favourite-count");
+const favBtn = document.querySelector(".favourite__btn");
 
 let search = "";
 
@@ -11,14 +13,14 @@ let activePage = 1;
 function getCard({ images, price, name, description, id }) {
   return `
    <div class="products__card">
-      <a>
+      <div>
         <div class="products__card__pic">
           <img
             class="products__card__img"
             src="${images[0]}"
             alt="Product 1"
             />
-        <button onClick="addFavouritesCart(${id})" class="products__card__favourite__btn">
+        <button onClick="addFavouritesCart(${id})" class="favourite__btn">
           <img src="../images/home/heart-icon.svg" alt="Heart" />
         </button>
         </div>
@@ -46,7 +48,7 @@ function getCard({ images, price, name, description, id }) {
               B корзину
            </button>
          </div>
-       </a>
+       </div>
      </div>`;
 }
 
@@ -148,12 +150,35 @@ function addToCart(id) {
   getTotalCart();
 }
 
-let favCartArr = [];
+let cartFavJson = localStorage.getItem("favCart");
+
+let cartFav = JSON.parse(cartFavJson) || [];
+
+favCount.textContent = cartFav.length;
+
+function getFavCount() {
+  favCount.textContent = cartFav.length;
+}
 
 function addFavouritesCart(id) {
   let favProduct = products.find((pr) => pr.id === id);
-  let checkFav = favCartArr.find((pr) => pr.id === id);
+  let checkFav = cartFav.find((pr) => pr.id === id);
 
-  favCartArr.push(favProduct);
-  localStorage.setItem("favCart", JSON.stringify(favCartArr));
+  if (checkFav) {
+    cartFav = cartFav.map((pr) => {
+      if (pr.id === id) {
+        pr.quantity++;
+      }
+      return pr;
+    });
+  } else {
+    favProduct.quantity = 1;
+    cartFav.push(favProduct);
+  }
+
+  localStorage.setItem("favCart", JSON.stringify(cartFav));
+  getFavCount();
 }
+
+addFavouritesCart();
+

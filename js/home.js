@@ -74,7 +74,7 @@ const discountsRow = document.querySelector(".discounts__row");
 function getDiscountCard({images, discount, price, name, description, id}) {
   return `
     <div class="discounts__card">
-      <a href="pages/product.html">
+      <a>
         <div class="discounts__card__pic">
             <img
               class="discounts__card__img"
@@ -84,7 +84,7 @@ function getDiscountCard({images, discount, price, name, description, id}) {
             <div class="discounts__card__percent">
               <p>-${discount}%</p>
             </div>
-            <button class="discounts__card__favourite__btn">
+            <button onClick="addFavouritesCart(${id})" class="favourite__btn"> 
               <img src="images/home/heart-icon.svg" alt="Heart" />
             </button>
         </div>
@@ -138,17 +138,17 @@ const newProductsRow = document.querySelector(".products__row");
 
 let newCard = products.filter((pr) => pr).slice(-4);
 
-function getNewCard({ images, discount, price, name, description, id }) {
+function getNewCard({ images, price, name, description, id }) {
   return `
    <div class="products__card">
-      <a href="pages/product.html">
+      <a>
         <div class="products__card__pic">
           <img
             class="products__card__img"
             src="${images[0]}"
             alt="Product 1"
             />
-        <button class="products__card__favourite__btn">
+        <button onClick="addFavouritesCart(${id})"    class="favourite__btn">
           <img src="images/home/heart-icon.svg" alt="Heart" />
         </button>
       <a/>
@@ -195,14 +195,14 @@ let purchasedCard = products.sort((a, b) => a.rating - b.rating).slice(-4);
 function getPurchasedCard({images, discount, price, name, description, id}) {
   return `
   <div class="products__card">
-              <a href="pages/product.html">
+              <a>
                 <div class="products__card__pic">
                   <img
                     class="products__card__img"
                     src="${images[0]}"
                     alt="Product 1"
                   />
-                  <button class="products__card__favourite__btn">
+                  <button onClick="addFavouritesCart(${id})"   class="favourite__btn">
                     <img src="images/home/heart-icon.svg" alt="Heart" />
                   </button>
                 </div>

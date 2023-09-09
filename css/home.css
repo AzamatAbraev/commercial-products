@@ -646,6 +646,21 @@ footer {
   }
 }
 
+.favourite-link, .favourite__btn__img {
+  position: relative;
+}
+
+.favourite-count {
+  position: absolute;
+  top: -2px;
+  right: 25%;
+  padding: 1px 2px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
 .home {
   background-image: url(../../images/home/home-back.png);
 }
@@ -753,7 +768,7 @@ footer {
   font-weight: 400;
   line-height: 150%;
 }
-.discounts__card__favourite__btn {
+.discounts__card .favourite__btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -763,7 +778,7 @@ footer {
   opacity: 0.5;
   background: #f3f2f1;
 }
-.discounts__card__favourite__btn img {
+.discounts__card .favourite__btn img {
   padding-top: 4px;
 }
 .discounts__card__info {
@@ -871,7 +886,7 @@ footer {
   width: 100%;
   position: relative;
 }
-.products__card__favourite__btn {
+.products__card .favourite__btn {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -881,7 +896,7 @@ footer {
   opacity: 0.5;
   background: #f3f2f1;
 }
-.products__card__favourite__btn img {
+.products__card .favourite__btn img {
   padding-top: 4px;
 }
 .products__card__info {

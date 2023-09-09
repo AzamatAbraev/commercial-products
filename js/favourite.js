@@ -1,13 +1,14 @@
 const favRow = document.querySelector(".favourites__cart");
 
-let cartFavJson = localStorage.getItem("favCart");
+let favCartCardJSON = localStorage.getItem("favCart");
 
-let cartFav = JSON.parse(cartFavJson);
+let favCartCard = JSON.parse(favCartCardJSON) || [];
 
-function getFavouriteCard({ id, images, name, price, description }) {
+
+function getFavouriteCard({id, images, name, price, description }) {
   return `
    <div class="products__card">
-      <a>
+      <div>
         <div class="products__card__pic">
           <img
             class="products__card__img"
@@ -17,7 +18,7 @@ function getFavouriteCard({ id, images, name, price, description }) {
         <button class="products__card__favourite__btn">
           <img src="../images/home/heart-icon.svg" alt="Heart" />
         </button>
-      <a/>
+      <div/>
       </div>
          <div class="products__card__info">
            <div class="products__card__price">
@@ -46,11 +47,12 @@ function getFavouriteCard({ id, images, name, price, description }) {
      </div>`;
 }
 
-function getFavProducts(pr) {
+
+function getFavProducts() {
   favRow.innerHTML = "";
-  cartFav.map((pr) => {
-    favRow.innerHTML += getFavouriteCard(pr);
-  })
+  favCartCard.map((el) => {
+    favRow.innerHTML += getFavouriteCard(el);
+  });
 }
 
 getFavProducts();
