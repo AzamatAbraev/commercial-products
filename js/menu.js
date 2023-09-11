@@ -66,3 +66,4 @@ let footerBtn = document.querySelector(".footer__btn");
 
 navBtn.addEventListener("click", toggle);
 footerBtn.addEventListener("click", toggle);
+

@@ -240,4 +240,4 @@ purchasedCard.map((el) => {
   purchasedProductsRow.innerHTML += purchased__card;
 })
 
-addToCart();
+addToCart(); 

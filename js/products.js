@@ -4,7 +4,7 @@ const searchInput = document.querySelector(".search__input");
 const pagination = document.querySelector(".pagination");
 const pageLink = document.querySelector(".page__btn");
 const favCount = document.querySelector(".favourite-count");
-const favBtn = document.querySelector(".favourite__btn");
+
 
 let search = "";
 
@@ -131,6 +131,8 @@ function getPage(page) {
   getProducts();
 }
 
+
+
 function addToCart(id) {
   let product = products.find((pr) => pr.id === id);
   let check = cart.find((pr) => pr.id === id);
@@ -149,6 +151,7 @@ function addToCart(id) {
   localStorage.setItem("cart", JSON.stringify(cart));
   getTotalCart();
 }
+
 
 let cartFavJson = localStorage.getItem("favCart");
 
@@ -181,4 +184,6 @@ function addFavouritesCart(id) {
 }
 
 addFavouritesCart();
+
+
 

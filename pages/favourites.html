@@ -39,12 +39,13 @@
             </button>
           </div>
           <div class="nav__right">
-            <a class="nav__right__link" href="./favourites.html">
+            <a class="nav__right__link favourite-link" href="./favourites.html">
               <img
-                class="nav__btn__image"
+                class="nav__btn__image favourite__btn__img"
                 src="../images/header/favourite.svg"
                 alt="Favourites"
               />
+              <span class="favourite-count"></span>
               <p>Избранное</p>
             </a>
             <a class="nav__right__link" href="./products.html">
@@ -55,12 +56,13 @@
               />
               <p>продукты</p>
             </a>
-            <a class="nav__right__link">
+            <a href="./cart.html" class="nav__right__link cart-link">
               <img
                 class="nav__btn__image"
                 src="../images/header/cart.svg"
                 alt="Cart"
               />
+              <span class="cart-count"></span>
               <p>Корзина</p>
             </a>
             <div class="nav__user">
@@ -128,11 +130,8 @@
               </li>
             </ul>
           </div>
-          <h1 class="favourites__title">
-            Избраное
-          </h1>
-          <div class="favourites__cart">
-          </div>
+          <h1 class="favourites__title">Избраное</h1>
+          <div class="favourites__cart"></div>
         </div>
       </section>
     </main>
@@ -216,6 +215,7 @@
       </div>
     </div>
 
+    <script src="../js/fav-count.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/menu.js"></script>
     <script src="../js/product-data.js"></script>

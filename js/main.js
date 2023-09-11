@@ -22,3 +22,5 @@ window.addEventListener("click", (e) => {
     modal.classList.remove("modal__show");
   }
 })
+
+

@@ -72,3 +72,4 @@ function decreaseQuantity(id) {
   getCartProducts();
   localStorage.setItem("cart", JSON.stringify(cart));
 }
+
