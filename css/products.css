@@ -721,6 +721,13 @@ main {
 .products__card .favourite__btn img {
   padding-top: 4px;
 }
+.products__card .favourite__btn:active {
+  background-color: red;
+}
+.products__card .liked {
+  background: red;
+  color: white;
+}
 .products__card__info {
   padding: 8px;
   display: flex;

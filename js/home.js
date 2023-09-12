@@ -1,4 +1,6 @@
 const menuColumn = document.querySelector(".nav__column");
+const homeFavCount = document.querySelector(".favourite-count");
+const favProductBtn = document.querySelector(".favourite__btn");
 
 const menu = [
   {
@@ -71,7 +73,7 @@ footerBtn.addEventListener("click", toggle);
 
 const discountsRow = document.querySelector(".discounts__row");
 
-function getDiscountCard({images, discount, price, name, description, id}) {
+function getDiscountCard({ images, discount, price, name, description, id }) {
   return `
     <div class="discounts__card">
       <a>
@@ -84,7 +86,7 @@ function getDiscountCard({images, discount, price, name, description, id}) {
             <div class="discounts__card__percent">
               <p>-${discount}%</p>
             </div>
-            <button onClick="addFavouritesCart(${id})" class="favourite__btn"> 
+            <button onClick="addToFavouritesCart(${id})" class="favourite__btn"> 
               <img src="images/home/heart-icon.svg" alt="Heart" />
             </button>
         </div>
@@ -129,8 +131,7 @@ let discountsCard = products.filter((pr) => pr.discount).slice(-4);
 discountsCard.map((el) => {
   let card = getDiscountCard(el);
   discountsRow.innerHTML += card;
-})
-
+});
 
 // New Products Section //
 
@@ -148,7 +149,7 @@ function getNewCard({ images, price, name, description, id }) {
             src="${images[0]}"
             alt="Product 1"
             />
-        <button onClick="addFavouritesCart(${id})"    class="favourite__btn">
+        <button onClick="addToFavouritesCart(${id})"    class="favourite__btn">
           <img src="images/home/heart-icon.svg" alt="Heart" />
         </button>
       <a/>
@@ -180,7 +181,6 @@ function getNewCard({ images, price, name, description, id }) {
      </div>`;
 }
 
-
 newCard.map((el) => {
   let card = getNewCard(el);
   newProductsRow.innerHTML += card;
@@ -188,11 +188,13 @@ newCard.map((el) => {
 
 // Favourites Section //
 
-const purchasedProductsRow = document.querySelector(".purchases .products__row");
+const purchasedProductsRow = document.querySelector(
+  ".purchases .products__row"
+);
 
 let purchasedCard = products.sort((a, b) => a.rating - b.rating).slice(-4);
 
-function getPurchasedCard({images, discount, price, name, description, id}) {
+function getPurchasedCard({ images, discount, price, name, description, id }) {
   return `
   <div class="products__card">
               <a>
@@ -202,7 +204,7 @@ function getPurchasedCard({images, discount, price, name, description, id}) {
                     src="${images[0]}"
                     alt="Product 1"
                   />
-                  <button onClick="addFavouritesCart(${id})"   class="favourite__btn">
+                  <button onClick="addToFavouritesCart(${id})"   class="favourite__btn">
                     <img src="images/home/heart-icon.svg" alt="Heart" />
                   </button>
                 </div>
@@ -238,6 +240,30 @@ function getPurchasedCard({images, discount, price, name, description, id}) {
 purchasedCard.map((el) => {
   let purchased__card = getPurchasedCard(el);
   purchasedProductsRow.innerHTML += purchased__card;
-})
+});
 
-addToCart(); 
+let homeFavJson = localStorage.getItem("favCart");
+let homeFav = JSON.parse(homeFavJson) || [];
+
+homeFavCount.textContent = homeFav.length;
+
+function getHomeFavCount() {
+  homeFavCount.textContent = homeFav.length;
+}
+
+function addToFavouritesCart(id) {
+  let homeFavProduct = products.find((pr) => pr.id === id);
+  let check = homeFav.find((pr) => pr.id === id);
+
+  if (check) {
+    return 0;
+  } else {
+    homeFavProduct.quantity = 1;
+    homeFav.push(homeFavProduct);
+  }
+
+  localStorage.setItem("favCart", JSON.stringify(homeFav));
+  getHomeFavCount();
+}
+
+addToCart();

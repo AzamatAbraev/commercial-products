@@ -95,6 +95,14 @@ main {
     img {
       padding-top: 4px;
     }
+    &:active {
+      background-color: red;
+    }
+  }
+
+  .liked {
+    background: red;
+    color: white;
   }
 
   &__info {

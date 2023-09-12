@@ -62,6 +62,7 @@ getFavProducts();
 
 function deleteFavProduct(id) {
   let product = favCartCard.find((pr) => pr.id === id);
+  console.log(id);
 
   if (product.quantity >= 1 && product.quantity <= 100) {
       let confirmed = confirm(

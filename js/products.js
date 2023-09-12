@@ -10,11 +10,11 @@ let search = "";
 
 let activePage = 1;
 
-function getCard({ images, price, name, description, id }) {
+function getCard({images, price, name, description, id }) {
   return `
    <div class="products__card">
       <div>
-        <div class="products__card__pic">
+        <div onClick="addToCategory(${id})" class="products__card__pic">
           <img
             class="products__card__img"
             src="${images[0]}"
@@ -46,6 +46,12 @@ function getCard({ images, price, name, description, id }) {
             class="products__card__button"
             >
               B корзину
+           </button>
+            <button
+            onclick="location.href='./category.html'"
+            class="products__card__button"
+            >
+              View similar products
            </button>
          </div>
        </div>
@@ -152,7 +158,6 @@ function addToCart(id) {
   getTotalCart();
 }
 
-
 let cartFavJson = localStorage.getItem("favCart");
 
 let cartFav = JSON.parse(cartFavJson) || [];
@@ -184,6 +189,3 @@ function addFavouritesCart(id) {
 }
 
 addFavouritesCart();
-
-
-
