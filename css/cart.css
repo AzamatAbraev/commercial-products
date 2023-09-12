@@ -699,7 +699,7 @@ main {
 .cart__card__buttons .remove__btn {
   background-color: red;
 }
-.cart__card__img {
+.cart__card__img img {
   height: 100%;
   width: 300px;
   -o-object-fit: cover;
@@ -733,4 +733,26 @@ main {
 }
 .home__breadcrumb__link.active {
   color: #FF6633;
+}
+
+@media (max-width: 700px) {
+  .home__title {
+    font-size: 44px;
+  }
+  .cart__card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cart__card__img img {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .cart__card__content {
+    font-size: 16px;
+  }
+  .home__title {
+    font-size: 34px;
+  }
 }

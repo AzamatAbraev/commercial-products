@@ -75,9 +75,11 @@ main {
       }
     }
     &__img {
-      height: 100%;
-      width: 300px;
-      object-fit: cover;
+      img {
+        height: 100%;
+        width: 300px;
+        object-fit: cover;
+      }
     }
   }
 }
@@ -112,5 +114,30 @@ main {
     &__link.active {
       color: vrb.$orange-main;
     }
+  }
+}
+
+@media (max-width: 700px) {
+  .home__title {
+    font-size: 44px;
+  }
+  .cart__card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__img {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .cart__card__content {
+    font-size: 16px;
+  }
+  .home__title {
+    font-size: 34px;
   }
 }

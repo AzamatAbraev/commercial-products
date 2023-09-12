@@ -35,7 +35,7 @@ function getCartProducts() {
   cartRow.innerHTML = "";
   cart.map((pr) => {
     cartRow.innerHTML += getCartCard(pr);
-  }); 
+  });
 }
 
 getCartProducts();
@@ -72,4 +72,3 @@ function decreaseQuantity(id) {
   getCartProducts();
   localStorage.setItem("cart", JSON.stringify(cart));
 }
-
