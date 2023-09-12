@@ -2,6 +2,7 @@ const menuColumn = document.querySelector(".nav__column");
 const homeFavCount = document.querySelector(".favourite-count");
 const favProductBtn = document.querySelector(".favourite__btn");
 
+
 const menu = [
   {
     name: "Молоко, сыр, яйцо",
