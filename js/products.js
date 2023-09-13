@@ -14,7 +14,7 @@ function getCard({images, price, name, description, id }) {
   return `
    <div class="products__card">
       <div>
-        <div onClick="addToCategory(${id})" class="products__card__pic">
+        <div class="products__card__pic">
           <img
             class="products__card__img"
             src="${images[0]}"
@@ -47,12 +47,12 @@ function getCard({images, price, name, description, id }) {
             >
               B корзину
            </button>
-            <button
-            onclick="location.href='./category.html'"
+            <a onClick="addToCategory(${id})" 
+            href='./category.html'"
             class="products__card__button"
             >
               View similar products
-           </button>
+           </a>
          </div>
        </div>
      </div>`;
@@ -187,5 +187,7 @@ function addFavouritesCart(id) {
   localStorage.setItem("favCart", JSON.stringify(cartFav));
   getFavCount();
 }
+
+
 
 addFavouritesCart();

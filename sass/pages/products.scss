@@ -176,6 +176,7 @@ main {
 .disabled {
   display: none;
 }
+
 @media (max-width: 900px) {
   .products__row {
     grid-template-columns: repeat(3, 1fr);
